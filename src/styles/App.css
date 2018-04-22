@@ -1,0 +1,43 @@
+/* http://nerdcave.com/tailwind-cheat-sheet */
+
+@import 'tailwindcss/preflight';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+
+@import 'base/_typography.css';
+@import 'vendor/_normalize.css';
+@import 'base/_global.css';
+
+.App {
+  @apply .mt-32;
+
+  text-align: center;
+
+  &-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+  }
+
+  &-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+  }
+
+  &-intro {
+    font-size: 8px;
+    display: none;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
