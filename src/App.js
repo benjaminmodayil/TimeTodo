@@ -1,25 +1,45 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
 import './styles/App.css'
 
-import Example from './components/Example.js'
+import Timer from './components/Test/timer.js'
+import Dashboard from './components/Dashboard/index.js'
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+  constructor(props) {
+    super(props)
+    this.state = {
+      tasks: [],
+      filters: ['inbox', 'work', 'school', 'home'],
+      logs: [],
+      timer: false
+    }
+  }
 
-        <Example />
-      </div>
+  taskBtnHandler() {
+    this.setState({
+      timer: true
+    })
+  }
+
+  renderTimer() {}
+
+  render() {
+    let dashboardOrTimer = this.state.timer ? (
+      <Timer type={'countdown'} />
+    ) : (
+      <Dashboard filters={this.state.filters} onClick={this.taskBtnHandler.bind(this)} />
     )
+    return <div className="App">{dashboardOrTimer}</div>
   }
 }
 
 export default App
+// show normal view by default
+// click play, set state to timer: true
+// if timer: true, show timer (conditional)
+
+// once timer done, or canceled, show normal view
+
+// lots of little things in between...
+// - checking off whether task complete
+// - what happens when canceled, etc

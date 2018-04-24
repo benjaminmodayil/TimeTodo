@@ -11,6 +11,13 @@ ul {
   padding-left: 0;
 }
 
+label,
+button,
+input,
+select {
+  cursor: pointer;
+}
+
 .screenreader-only {
   border: 0;
   clip: rect(0 0 0 0);
@@ -20,4 +27,8 @@ ul {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.text-big {
+  font-size: 72px;
 }

@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="101" viewBox="0 0 210 101">
+  <defs>
+    <linearGradient id="illustation-timer-coffee-a" x1="60.052%" x2="35.561%" y1="111.675%" y2=".083%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-b" x1="46714%" x2="47010%" y1="62255.583%" y2="54583.99%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-c" x1="47494%" x2="47494%" y1="36976%" y2="2666%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-d" x1="47494%" x2="47494%" y1="20633%" y2="19010%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-e" x1="49800%" x2="49800%" y1="19921%" y2="9221%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-f" x1="49100%" x2="49100%" y1="25421%" y2="19821%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-g" x1="50350%" x2="50350%" y1="44839%" y2="43936%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-h" x1="52926%" x2="52926%" y1="50870%" y2="49966%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-i" x1="52446%" x2="52446%" y1="47679%" y2="46776%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-j" x1="47316%" x2="47316%" y1="43629%" y2="42725%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-k" x1="45693%" x2="45693%" y1="37369%" y2="36466%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-l" x1="47316%" x2="47316%" y1="31110%" y2="30206%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-m" x1="51952%" x2="51952%" y1="26473%" y2="25570%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-n" x1="64819%" x2="64819%" y1="26589%" y2="25686%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-o" x1="69339%" x2="69339%" y1="31342%" y2="30438%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-p" x1="70730%" x2="70730%" y1="37369%" y2="36466%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-q" x1="69339%" x2="69339%" y1="43397%" y2="42493%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-r" x1="32585%" x2="32585%" y1="65720%" y2="41276%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-s" x1="22445%" x2="22445%" y1="59542%" y2="43693%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="illustation-timer-coffee-t" x1="50%" x2="50%" y1="100%" y2="0%">
+      <stop offset="1%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" transform="translate(.564 -.001)">
+    <path fill="#FF6347" d="M113.129239,18.2220634 C108.098596,18.2220607 104.019965,14.144847 104.018213,9.11420436 C104.016461,4.08356168 108.092252,0.00350849854 113.122894,2.21302055e-06 C118.153536,-0.0035040725 122.23501,4.07086361 122.240271,9.10150384 C122.240274,14.1349313 118.162664,18.2168052 113.129239,18.2220634 Z M113.129239,1.65546851 C110.113746,1.65546851 107.395177,3.47195817 106.241197,6.2579112 C105.087218,9.04386423 105.725084,12.2506349 107.85736,14.382911 C109.989636,16.5151872 113.196407,17.1530535 115.98236,15.999074 C118.768313,14.8450944 120.584803,12.1265256 120.584803,9.11103172 C120.580863,4.99507069 117.2452,1.65940786 113.129239,1.65546851 Z"/>
+    <polygon fill="url(#illustation-timer-coffee-a)" points="86.708 98.659 98.628 99.311 107.046 84.729 95.808 78.238"/>
+    <polygon fill="#FF6347" points="87.297 98.223 98.035 98.335 106.179 84.229 96.191 78.462"/>
+    <polygon fill="url(#illustation-timer-coffee-b)" points="139.55 98.659 127.631 99.311 119.21 84.729 130.451 78.238"/>
+    <polygon fill="#FF6347" points="138.962 98.223 128.224 98.335 120.077 84.229 130.067 78.462"/>
+    <circle cx="113.129" cy="47.213" r="40.863" fill="url(#illustation-timer-coffee-c)"/>
+    <circle cx="113.129" cy="47.213" r="39.76" fill="#FF6347"/>
+    <circle cx="113.129" cy="47.213" r="32.304" fill="#FFF"/>
+    <circle cx="113.129" cy="47.213" r="1.932" fill="url(#illustation-timer-coffee-d)"/>
+    <path fill="#FF6347" d="M123.898122,22.3643077 L113.405548,47.2130091"/>
+    <polygon fill="url(#illustation-timer-coffee-e)" points="113.858 47.454 112.667 47.053 123.386 21.964 124.577 22.526"/>
+    <rect width="26.973" height="1" x="105.24" y="34.317" fill="#2196F3" transform="rotate(-67.11 118.727 34.817)"/>
+    <path fill="#FF6347" d="M113.405548,47.4893175 L120.308494,60.1899766"/>
+    <polygon fill="url(#illustation-timer-coffee-f)" points="119.813 60.554 112.905 47.692 113.858 47.215 121.004 59.84"/>
+    <rect width="1" height="14.456" x="116.43" y="46.582" fill="#2196F3" transform="rotate(-28.52 116.93 53.811)"/>
+    <circle cx="143.223" cy="48.042" r="1" fill="#FF6347"/>
+    <circle cx="87.204" cy="32.331" r="1.077" fill="url(#illustation-timer-coffee-g)" transform="rotate(-60 87.204 32.33)"/>
+    <circle cx="87.481" cy="62.978" r="1.077" fill="url(#illustation-timer-coffee-h)" transform="rotate(-30 87.48 62.978)"/>
+    <circle cx="83.033" cy="48.042" r="1.077" fill="url(#illustation-timer-coffee-i)"/>
+    <circle cx="98.191" cy="21.289" r="1.077" fill="url(#illustation-timer-coffee-j)" transform="rotate(-30 98.191 21.29)"/>
+    <circle cx="113.102" cy="17.422" r="1.077" fill="url(#illustation-timer-coffee-k)" transform="rotate(-30 113.102 17.422)"/>
+    <circle cx="128.011" cy="21.288" r="1.077" fill="url(#illustation-timer-coffee-l)" transform="rotate(-30 128.01 21.288)"/>
+    <circle cx="139.053" cy="32.333" r="1.077" fill="url(#illustation-timer-coffee-m)" transform="rotate(-30 139.053 32.333)"/>
+    <circle cx="138.779" cy="62.982" r="1.077" fill="url(#illustation-timer-coffee-n)" transform="rotate(-30 138.78 62.982)"/>
+    <circle cx="127.459" cy="73.747" r="1.077" fill="url(#illustation-timer-coffee-o)" transform="rotate(-30 127.46 73.747)"/>
+    <circle cx="113.103" cy="77.061" r="1.077" fill="url(#illustation-timer-coffee-p)" transform="rotate(-30 113.103 77.06)"/>
+    <circle cx="98.745" cy="73.746" r="1.077" fill="url(#illustation-timer-coffee-q)" transform="rotate(-30 98.745 73.746)"/>
+    <circle cx="113.129" cy="17.396" r="1" fill="#69F0AE"/>
+    <circle cx="128.038" cy="21.39" r="1" fill="#69F0AE" transform="rotate(-60 128.038 21.39)"/>
+    <circle cx="138.953" cy="32.304" r="1" fill="#69F0AE" transform="rotate(-30 138.953 32.304)"/>
+    <circle cx="138.777" cy="62.977" r="1" fill="#69F0AE" transform="rotate(-60 138.777 62.977)"/>
+    <circle cx="127.461" cy="73.693" r="1" fill="#69F0AE" transform="rotate(-30 127.46 73.693)"/>
+    <circle cx="98.221" cy="21.388" r="1" fill="#69F0AE" transform="rotate(-30 98.22 21.388)"/>
+    <circle cx="87.658" cy="31.803" r="1" fill="#69F0AE" transform="rotate(-60.113 87.658 31.803)"/>
+    <circle cx="143.197" cy="48.069" r="1.077" fill="#69F0AE" transform="rotate(-30 143.197 48.069)"/>
+    <circle cx="87.481" cy="62.978" r="1" fill="#69F0AE" transform="rotate(-30 87.48 62.978)"/>
+    <circle cx="99.321" cy="73.146" r="1" fill="#69F0AE" transform="rotate(-60.113 99.32 73.146)"/>
+    <circle cx="83.033" cy="48.042" r="1" fill="#69F0AE"/>
+    <circle cx="113.129" cy="77.033" r="1" fill="#69F0AE"/>
+    <path fill="#FF6347" d="M82.4804432,50.2500196 C82.48483,35.6132767 92.3283135,22.8078539 106.471699,19.0397094 C120.615084,15.2715649 135.524886,21.4821057 142.810956,34.1764923 C138.080308,23.1610307 127.639295,15.6705242 115.688832,14.7187592 C103.738369,13.7669942 92.2433686,19.5104612 85.8288155,29.638291 C79.4142625,39.7661208 79.134847,52.6130802 85.1029912,63.010228 C83.3684252,58.9799715 82.4759761,54.6376918 82.4804432,50.2500196 Z" opacity=".2"/>
+    <circle cx="113.129" cy="47.213" r="1.382" fill="#69F0AE"/>
+    <path fill="url(#illustation-timer-coffee-r)" d="M55.7785699,99.4257712 L22.2809387,99.4257712 C17.75027,99.4257712 14.0774372,95.7529385 14.0774372,91.2222697 L14.0774372,41.2009191 L63.9820714,41.2009191 L63.9820714,91.2222697 C63.9820714,93.3979736 63.1177764,95.4845663 61.5793214,97.0230213 C60.0408665,98.5614762 57.9542737,99.4257712 55.7785699,99.4257712 Z"/>
+    <path fill="url(#illustation-timer-coffee-s)" d="M14.8753969,84.7099663 C6.66951342,84.7099663 0,76.2420662 0,65.8352433 C0,55.4284204 6.66951342,46.9605204 14.8753969,46.9605204 C23.0812804,46.9605204 29.7507938,55.4284204 29.7507938,65.8352433 C29.7507938,76.2420662 23.0788984,84.7099663 14.8753969,84.7099663 Z M14.8753969,50.3929378 C8.4964837,50.3929378 3.30617308,57.3197039 3.30617308,65.8352433 C3.30617308,74.3507828 8.4964837,81.2751669 14.8753969,81.2751669 C21.2543101,81.2751669 26.4398568,74.3484008 26.4398568,65.8352433 C26.4398568,57.3220858 21.256692,50.3905558 14.8753969,50.3905558 L14.8753969,50.3929378 Z"/>
+    <path fill="#FF6347" d="M15.3565546,83.1092831 C7.41745171,83.1092831 0.959933538,75.2154375 0.959933538,65.5136775 C0.959933538,55.8119174 7.41745171,47.9275998 15.3565546,47.9275998 C23.2956576,47.9275998 29.7531757,55.8214453 29.7531757,65.5232054 C29.7531757,75.2249654 23.2932756,83.1092831 15.3565546,83.1092831 Z M15.3565546,51.1170564 C9.18249079,51.1170564 4.16129998,57.5745746 4.16129998,65.5136775 C4.16129998,73.4527804 9.18487276,79.9102986 15.3565546,79.9102986 C21.5282365,79.9102986 26.5518093,73.4527804 26.5518093,65.5136775 C26.5518093,57.5745746 21.5306185,51.1170564 15.3565546,51.1170564 Z"/>
+    <path fill="#FF6347" d="M15.1850529,41.8416688 L62.8839836,41.8416688 L62.8839836,89.3024027 C62.8839836,93.8330714 59.2111509,97.5059042 54.6804821,97.5059042 L23.3909363,97.5059042 C18.8602676,97.5059042 15.1874348,93.8330714 15.1874348,89.3024027 L15.1874348,41.8416688 L15.1850529,41.8416688 Z"/>
+    <path fill="#000" d="M59.1133266,7.4103058 C59.5897204,8.68704122 59.0251937,10.1876817 58.0200028,11.1118857 C57.0148118,12.0360897 55.6594714,12.479136 54.3160409,12.7363887 C51.8197373,13.2127825 49.1757516,13.1437054 46.8557137,14.1822439 C44.5356758,15.2207824 42.6586842,17.9767206 43.7472441,20.2729388 C44.985868,22.8931048 48.6398086,22.8121179 51.3695451,23.7553776 C54.0302725,24.6878005 56.0923697,26.8249956 56.9290609,29.5173608 C57.2768284,30.6773797 57.3744892,31.9612611 56.9290609,33.0903144 C56.1882686,34.9339585 54.2112342,35.9200937 52.3580623,36.6346844 C45.3170311,39.3403939 37.7684723,40.4697507 30.2438614,39.9432395 C29.119572,39.8646345 27.7070643,39.4811375 27.5712921,38.363994 C31.8943989,37.8377485 36.053713,36.3876751 39.7669737,34.1121792 C40.4672726,33.6810427 41.1770994,33.1951211 41.5701243,32.4710025 C42.3728479,30.9965636 41.5129571,29.0719326 40.1409429,28.0905613 C38.7689287,27.1091901 37.0610569,26.8114439 35.4222621,26.4493846 C31.4205541,25.5537643 20.4849341,22.9169245 18.8413754,18.5245735 C17.2954775,14.4204408 25.1678853,9.19440064 28.1667843,7.07206619 C31.8040511,4.49953959 35.5913819,3.64917663 40.0075526,3.30617308 C44.1950543,2.98222528 57.1672578,2.27001653 59.1133266,7.4103058 Z" opacity=".2"/>
+    <rect width="45.281" height="82.395" x="163.379" y="17.75" fill="url(#illustation-timer-coffee-t)" rx="22.641"/>
+    <rect width="43.195" height="79.331" x="164.423" y="18.896" fill="#FFF" rx="21.597"/>
+    <rect width="33.443" height="64.561" x="169.298" y="24.506" fill="#FF6347"/>
+    <ellipse cx="186.02" cy="93.716" fill="#DBDBDB" rx="2.665" ry="2.735"/>
+    <ellipse cx="180.953" cy="21.497" fill="#DBDBDB" rx="1" ry="1"/>
+    <rect width="8.265" height="1" x="183.354" y="21.085" fill="#DBDBDB" rx=".5"/>
+    <path fill="#000" d="M18.102965,89.507252 L18.102965,42.0465181 L15.482799,41.8083212 L15.482799,89.2690551 C15.482799,93.7997239 19.1556317,97.4725566 23.6863005,97.4725566 L24.343724,97.4725566 C20.6791672,96.5686766 18.1037945,93.2816361 18.102965,89.507252 Z" opacity=".2"/>
+    <polygon fill="#000" points="171.204 26.173 202.741 26.173 202.741 24.506 169.298 24.506 169.298 89.067 171.204 89.067" opacity=".2"/>
+  </g>
+</svg>
