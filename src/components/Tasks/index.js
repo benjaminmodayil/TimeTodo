@@ -1,27 +1,18 @@
 import React, { Component } from 'react'
-
 import './index.css'
+
 import NewTask from '../../images/icons/icon-new.svg'
 import TaskItems from '../TaskItems/index'
+import TaskForm from '../TaskForm/index'
 
-export default class Tasks extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      tasks: [
-        {
-          title: 'Ask Michael about lead generation',
-          status: 'incomplete',
-          time: { hour: 1, minutes: 35 }
-        }
-      ]
-    }
-  }
+import { connect } from 'react-redux'
 
+export class Tasks extends Component {
   render() {
     return (
-      <section className="max-w-sm md-max-w-full w-full md-w-1-2 px-2 mx-auto">
+      <section className="w-full">
         <h2 className="mb-16">Inbox</h2>
+        <TaskForm />
         <article className="">
           <div className="flex mb-8">
             <button>
@@ -29,10 +20,14 @@ export default class Tasks extends Component {
             </button>
             <h3>Tasks</h3>
           </div>
-
-          <TaskItems items={this.state.tasks} onClick={this.props.onClick} />
+          <TaskItems items={this.props.tasks} />
         </article>
       </section>
     )
   }
 }
+const mapStateToProps = state => ({
+  tasks: state.tasks
+})
+
+export default connect(mapStateToProps)(Tasks)
