@@ -27,9 +27,8 @@ export const toggleCheckbox = task => ({
   task
 })
 
-// export const ADD_CARD = 'ADD_CARD'
-// export const addCard = (text, listIndex) => ({
-//   type: ADD_CARD,
-//   text,
-//   listIndex
-// })
+export const SORT_FILTER = 'SORT_FILTER'
+export const sortFilter = text => ({
+  type: SORT_FILTER,
+  text
+})

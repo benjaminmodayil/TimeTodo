@@ -21,7 +21,7 @@ class Timer extends Component {
     let startTime = this.props.currentTask.time * 60 || 1500
     let type =
       this.props.type === 'countdown' ? <CountDown startTime={startTime} /> : <CountUp />
-    let tasks = this.props.tasks.map((item, index) => (
+    let tasks = this.props.visible.map((item, index) => (
       <li className="list-reset text-center text-lg opacity-50 mb-4">{item.title}</li>
     ))
 
@@ -56,15 +56,11 @@ class Timer extends Component {
   }
 }
 //////////
-// actions
-/////////
-// cancel ✅
-// done
-// get list except current
+// change from all tasks to filtered
 
 const mapStateToProps = state => ({
   currentTask: state.currentTask,
-  tasks: state.tasks
+  visible: state.visible
 })
 
 export default connect(mapStateToProps)(Timer)

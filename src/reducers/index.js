@@ -1,113 +1,141 @@
-import * as actions from '../actions'
-
-const initialState = {
-  tasks: [
-    {
-      _id: 0,
-      title: 'Ask Michael about lead generation',
-      status: false,
-      time: 35
-    },
-    {
-      _id: 1,
-      title: 'Find hotel for conference',
-      status: false,
-      time: 15
-    },
-    {
-      _id: 2,
-      title: 'Code new landing page',
-      status: false,
-      time: 45
-    }
-  ],
-  completed: [
-    {
-      _id: 3,
-      title: 'Coffee + News',
-      status: true,
-      time: 5
-    }
-  ],
-  filters: ['inbox', 'work', 'school', 'home'],
-  logs: [],
-  timer: false
-}
+import { initialState } from '../utils.js'
 
 export const taskReducer = (state = initialState, action) => {
-  if (action.type === actions.ADD_TASK) {
-    return Object.assign({}, state, {
-      tasks: [
-        ...state.tasks,
-        {
-          title: action.task.title,
-          status: action.task.status,
-          time: action.task.time
-        }
-      ]
-    })
-  } else if (action.type === actions.START_TIMER) {
-    return Object.assign({}, state, {
-      timer: true,
-      currentTask: action.task
-    })
-  } else if (action.type === actions.CANCEL_TIMER) {
-    return Object.assign({}, state, {
-      currentTask: null,
-      timer: false
-    })
-  } else if (action.type === actions.DONE_TIMER) {
-    let items = state.tasks.filter(item => {
-      return item._id !== action.task._id
-    })
-
-    return Object.assign({}, state, {
-      timer: false,
-      currentTask: null,
-      tasks: [...items],
-      completed: [
-        ...state.completed,
-        {
-          id: action.task._id,
-          title: action.task.title,
-          status: !action.task.status,
-          time: action.task.time
-        }
-      ]
-    })
-  } else if (action.type === actions.TOGGLE_CHECKBOX) {
-    let obj
-    if (action.task.status) {
-      let items = state.completed.filter(item => item._id !== action.task._id)
-      obj = {
-        tasks: [
-          ...state.tasks,
-          {
-            _id: action.task._id,
-            title: action.task.title,
-            status: !action.task.status,
-            time: action.task.time
-          }
-        ],
-        completed: [...items]
+  switch (action.type) {
+    case 'ADD_TASK':
+      // check if added task is on visible page, then add
+      let visible = state.currentFilter === action.task.filter
+      if (visible) {
+        return Object.assign({}, state, {
+          allTasks: [
+            ...state.allTasks,
+            {
+              title: action.task.title,
+              status: action.task.status,
+              time: action.task.time,
+              filter: action.task.filter
+            }
+          ],
+          visible: [
+            ...state.visible,
+            {
+              title: action.task.title,
+              status: action.task.status,
+              time: action.task.time,
+              filter: action.task.filter
+            }
+          ]
+        })
+      } else {
+        return Object.assign({}, state, {
+          allTasks: [
+            ...state.allTasks,
+            {
+              title: action.task.title,
+              status: action.task.status,
+              time: action.task.time,
+              filter: action.task.filter
+            }
+          ]
+        })
       }
-    } else {
-      let items = state.tasks.filter(item => item._id !== action.task._id)
 
-      obj = {
-        tasks: [...items],
+    case 'START_TIMER':
+      return Object.assign({}, state, {
+        timer: true,
+        currentTask: action.task
+      })
+
+    case 'CANCEL_TIMER':
+      return Object.assign({}, state, {
+        currentTask: null,
+        timer: false
+      })
+
+    case 'DONE_TIMER':
+      let items = state.allTasks.filter(item => item._id !== action.task._id)
+
+      return Object.assign({}, state, {
+        timer: false,
+        currentTask: null,
+        allTasks: [...items],
         completed: [
           ...state.completed,
           {
-            _id: action.task._id,
+            id: action.task._id,
             title: action.task.title,
             status: !action.task.status,
             time: action.task.time
           }
         ]
+      })
+
+    case 'SORT_FILTER':
+      let filtered = state.allTasks.filter(item => {
+        if (action.text === 'all') return item
+        return action.text === item.filter
+      })
+      return Object.assign({}, state, {
+        ...state,
+        visible: [...filtered],
+        currentFilter: action.text
+      })
+
+    case 'TOGGLE_CHECKBOX':
+      let obj
+      if (action.task.status) {
+        let items = state.completed.filter(item => item._id !== action.task._id)
+
+        let visible = state.allTasks.filter(item => {
+          if (state.currentFilter === 'all') return item
+          return state.currentFilter === item.filter
+        })
+        obj = {
+          allTasks: [
+            ...state.allTasks,
+            {
+              _id: action.task._id,
+              title: action.task.title,
+              status: !action.task.status,
+              time: action.task.time,
+              filter: action.task.filter
+            }
+          ],
+          visible: [
+            ...visible,
+            {
+              _id: action.task._id,
+              title: action.task.title,
+              status: !action.task.status,
+              time: action.task.time,
+              filter: action.task.filter
+            }
+          ],
+          completed: [...items]
+        }
+      } else {
+        let items = state.allTasks.filter(item => item._id !== action.task._id)
+        let visible = state.visible.filter(item => item._id !== action.task._id)
+
+        obj = {
+          allTasks: [...items],
+          visible: [...visible],
+          completed: [
+            ...state.completed,
+            {
+              _id: action.task._id,
+              title: action.task.title,
+              status: !action.task.status,
+              time: action.task.time,
+              filter: action.task.filter
+            }
+          ]
+        }
       }
-    }
-    return Object.assign({}, state, obj)
+      console.log(state, obj)
+      return Object.assign({}, state, obj)
+
+    default:
+      return state
   }
-  return state
 }
