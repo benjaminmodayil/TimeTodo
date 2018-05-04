@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './index.css'
 
-import NewTask from '../../images/icons/icon-new.svg'
 import TaskItems from '../TaskItems/index'
 import TaskForm from '../TaskForm/index'
 
@@ -13,13 +12,10 @@ export class Tasks extends Component {
 
     return (
       <section className="w-full">
-        <h2 className="mb-16 capitalize">{this.props.currentFilter}</h2>
+        <h2 className="mb-8 capitalize">{this.props.currentFilter}</h2>
         <TaskForm />
         <article className="">
           <div className="flex mb-8">
-            <button>
-              <img src={NewTask} alt="Add a new task" />
-            </button>
             <h3>Tasks</h3>
           </div>
           <TaskItems items={filterType} />

@@ -3,50 +3,56 @@ import './index.css'
 
 import { connect } from 'react-redux'
 import { startTimer, toggleCheckbox } from '../../actions'
+import TaskDropdown from '../TaskDropdown'
 
 import Play from '../../images/icons/icon-play.svg'
-import Options from '../../images/icons/icon-options.svg'
 
 class TaskItems extends Component {
-  constructor(props) {
-    super(props)
-    this.taskPasser = this.taskPasser.bind(this)
-  }
-
-  taskPasser(task) {
+  taskPasser = task => {
     this.props.dispatch(startTimer(task))
   }
 
-  toggleCheckbox(e, task) {
+  toggleCheckbox = (e, task) => {
     this.props.dispatch(toggleCheckbox(task))
   }
+  items = ['Bananas', 'Oranges', 'Apples', 'Other']
 
   render() {
     let items = this.props.items.map((item, index) => {
       let strike = item.status ? 'line-through italic opacity-75' : ''
       let check = item.status ? true : ''
       let playTemplate = !check ? (
-        <button onClick={() => this.taskPasser(item)}>
+        <button className="w-6 mr-2" onClick={() => this.taskPasser(item)}>
           <img src={Play} alt="Start timer for task" />
         </button>
       ) : (
         ''
       )
+
       return (
-        <li className={strike + ' tw-task__list-item flex'} key={index}>
-          <input
-            type="checkbox"
-            name=""
-            id=""
-            checked={check}
-            onChange={e => this.toggleCheckbox(e, item)}
-          />
+        <li
+          className={
+            strike +
+            ' tw-task__list-item flex mb-4 border-b border-black-lightest pb-2 items-center'
+          }
+          key={index}
+        >
+          <label htmlFor={'check-' + item._id} className="control checkbox w-6 h-6">
+            <input
+              type="checkbox"
+              name={'check-' + item._id}
+              id={'check-' + item._id}
+              checked={check}
+              onChange={e => this.toggleCheckbox(e, item)}
+            />
+            <span className="control-indicator" />
+          </label>
+
           <p>{item.title}</p>
 
           {playTemplate}
-          <button>
-            <img src={Options} alt="View options for task" />
-          </button>
+
+          <TaskDropdown item={item} />
         </li>
       )
     })

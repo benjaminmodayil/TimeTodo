@@ -1,5 +1,4 @@
 import React from 'react'
-import './index.css'
 
 import minus from '../../images/icons/icon-minus.svg'
 import plus from '../../images/icons/icon-add.svg'

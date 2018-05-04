@@ -32,3 +32,9 @@ select {
 .text-big {
   font-size: 72px;
 }
+
+/* Modified by Ben Modayil */
+input {
+  outline: 0;
+}
+/* end modification */

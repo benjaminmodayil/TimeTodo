@@ -1,13 +1,27 @@
-.tw-task__list-item {
-  input {
-    flex: 1 1 8.333333333%;
+.tw-task-form {
+  background: #efefef;
+}
+
+.tw-input-borders {
+  border-bottom: 1px solid #000000;
+  height: 30px;
+  position: relative;
+  width: 100%;
+
+  &:before {
+    border-bottom: 1px solid #000000;
+    content: '';
+    width: 100%;
+    position: absolute;
   }
 
-  p {
-    flex: 1 1 75%;
+  &:after {
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #000000;
   }
 
-  button {
-    flex: 1 1 8.333333333%;
+  &:focus {
+    background: #eeeeee;
   }
 }

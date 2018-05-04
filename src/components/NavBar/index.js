@@ -1,25 +1,23 @@
 import React from 'react'
 import './index.css'
-import Menu from '../../images/icons/icon-menu.svg'
-import User from '../../images/icons/icon-menu-user.svg'
+import MenuDropdown from '../MenuDropdown'
 
 export default () => {
   return (
     <nav className="bg-red mb-16">
       <div className="nav-inner container mx-auto flex justify-between items-center px-2 md-px-0 py-2">
-        <button>
-          <img src={Menu} alt="Menu Button" />
-        </button>
-        <a
-          href="/"
-          className="my-0 text-white text-xl font-semibold no-underline hover-underline"
-        >
+        <a href="/logsheet" className={sharedStyles}>
+          Log sheet
+        </a>
+        <a href="/" className={'text-xl font-semibold ' + sharedStyles}>
           TaskTodo
         </a>
-        <button>
-          <img src={User} alt="User Menu" />
-        </button>
+        <div className="relative w-6 h-6">
+          <MenuDropdown items={['settings', 'contact', 'logout']} />
+        </div>
       </div>
     </nav>
   )
 }
+
+let sharedStyles = 'my-0 text-white no-underline hover-underline'

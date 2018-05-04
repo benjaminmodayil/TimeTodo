@@ -3,6 +3,7 @@
 @import 'tailwindcss/preflight';
 
 @import 'tailwindcss/components';
+@import 'vendor/_wtf-forms.css';
 
 @import 'tailwindcss/utilities';
 
