@@ -1,28 +1,31 @@
 import React from 'react'
 import './index.css'
 
-import NavBar from '../NavBar/index.js'
-
-import Filters from '../Filters/index.js'
-import Tasks from '../Tasks/index.js'
-import Log from '../Log/index.js'
-import Completed from '../Completed/index.js'
+import NavBar from '../NavBar'
+import Filters from '../Filters'
+import TaskSection from '../TaskSection'
+import Log from '../Log/'
+import Completed from '../Completed/'
+import CoffeeClock from '../../images/illustrations/timer-coffee.svg'
 
 export default props => {
   return (
-    <div>
+    <React.Fragment>
       <NavBar />
-      <main className="container mx-auto">
+      <main className="container px-4 md-px-0 mx-auto">
         <h1 className="screenreader-only">Task Dashboard</h1>
         <Filters categories={props.filters} />
         <div className="flex justify-between -mx-2 flex-col md-flex-row">
-          <div className="flex justify-between flex-col max-w-sm md-max-w-full w-full md-w-1-2 px-2 mx-auto">
-            <Tasks onClick={props.onClick} />
+          <div className="flex justify-between flex-col max-w-sm md-max-w-full w-full md-w-1-2 px-2 mx-auto mb-32 md-mb-0">
+            <TaskSection onClick={props.onClick} />
             <Completed onClick={props.onClick} />
           </div>
-          <Log />
+          <Log logs={props.completed} />
+        </div>
+        <div className="mt-32 md-mt-16 flex justify-center md-justify-end">
+          <img src={CoffeeClock} alt="" />
         </div>
       </main>
-    </div>
+    </React.Fragment>
   )
 }

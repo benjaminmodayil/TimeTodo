@@ -2,8 +2,9 @@ import React from 'react'
 import Downshift from 'downshift'
 import './index.css'
 import Options from '../../images/icons/icon-options.svg'
+import Buttons from './Buttons'
 
-export default function Dropdown({ item, ...rest }) {
+export default function Dropdown({ item, edit, ...rest }) {
   return (
     <Downshift {...rest}>
       {({
@@ -41,26 +42,13 @@ export default function Dropdown({ item, ...rest }) {
               <span className="screenreader-only">Toggle Dropdown</span>
               <img src={Options} alt="" />
             </button>
-            {isOpen ? (
-              <div style={{ display: 'block' }} className="dropdown-menu">
-                <button
-                  {...getItemProps({ item })}
-                  // key={item._id}
-                  className="dropdown-item mb-4"
-                  data-id={item._id}
-                >
-                  delete
-                </button>
 
-                <button
-                  {...getItemProps({ item })}
-                  // key={item._id}
-                  className="dropdown-item"
-                  data-id={item._id}
-                >
-                  edit
-                </button>
-              </div>
+            {isOpen ? (
+              <Buttons
+                {...item}
+                edit={taskID => edit(taskID)}
+                itemProps={getItemProps({ item })}
+              />
             ) : null}
           </div>
         </div>
