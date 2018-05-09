@@ -72,8 +72,10 @@ export const taskReducer = (state = initialState, action) => {
 
     case 'DELETE_TASK_SUCCESS':
       let tasks = [...state.allTasks].filter(i => i._id !== action.taskID)
+
       let newObj = {
-        allTasks: [...tasks]
+        allTasks: [...tasks],
+        completed: [...state.completed].filter(i => i._id !== action.taskID)
       }
       return Object.assign({}, state, newObj)
 
@@ -93,6 +95,8 @@ export const taskReducer = (state = initialState, action) => {
           return state.currentFilter === item.filter
         })
         newState = {
+          timer: false,
+          currentTask: null,
           allTasks: [...state.allTasks, { ...task }],
           visible: [...visible, { ...task }],
           completed: [...items]
@@ -101,6 +105,8 @@ export const taskReducer = (state = initialState, action) => {
         let items = state.allTasks.filter(item => item._id !== task._id)
         let visible = state.visible.filter(item => item._id !== task._id)
         newState = {
+          timer: false,
+          currentTask: null,
           allTasks: [...items],
           visible: [...visible],
           completed: [...state.completed, { ...task }]

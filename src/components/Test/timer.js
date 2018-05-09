@@ -6,21 +6,46 @@ import CountDown from './countdown'
 import CountUp from './countup'
 
 import { connect } from 'react-redux'
-import { cancelTimer, doneTimer } from '../../actions'
+import { cancelTimer, toggleCheckbox } from '../../actions'
 
 class Timer extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      currentTime: null
+    }
+  }
   cancel() {
     this.props.dispatch(cancelTimer())
   }
 
+  // addTimeToTask(time, task) {
+
+  //   let newTask;
+  //     this.done(newTask)
+  // }
+
   done(task) {
-    this.props.dispatch(doneTimer(task))
+    this.props.dispatch(toggleCheckbox(task))
+  }
+
+  updateTime(currentTime) {
+    this.setState({
+      currentTime
+    })
   }
 
   render() {
     let startTime = this.props.currentTask.time * 60 || 1500
     let type =
-      this.props.type === 'countdown' ? <CountDown startTime={startTime} /> : <CountUp />
+      this.props.type === 'countdown' ? (
+        <CountDown
+          update={currentTime => this.updateTime(currentTime)}
+          startTime={startTime}
+        />
+      ) : (
+        <CountUp />
+      )
     let tasks = this.props.visible.map((item, index) => (
       <li className="list-reset text-center text-lg opacity-50 mb-4">{item.title}</li>
     ))

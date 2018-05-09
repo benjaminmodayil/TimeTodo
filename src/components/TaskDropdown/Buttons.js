@@ -6,7 +6,6 @@ export class Buttons extends Component {
   deleteItem = taskID => this.props.dispatch(deleteTask(taskID))
 
   render() {
-    console.log(this.props)
     return (
       <div style={{ display: 'block' }} className="dropdown-menu">
         <button
