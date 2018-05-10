@@ -14,7 +14,9 @@ class Timer extends Component {
     this.state = {
       currentTime: null,
       isPaused: false
+      // currentTask: this.props.currentTask
     }
+    // console.log(this.state.currentTask)
     this.playPause = this.playPause.bind(this)
   }
   cancel() {

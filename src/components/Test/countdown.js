@@ -47,7 +47,6 @@ class CountDown extends Component {
       console.log('is paused', convertTime(Math.floor(this.state.time / 10) * 1000))
       this.setState({ timerActive: true })
     } else if (!this.state.isPaused && this.state.timerActive) {
-      // //  this should test if the timer is already running
       this.stopTime = Date.now() + this.state.time * 100
       this.startTimer()
       console.log('is going', convertTime(Math.floor(this.state.time / 10) * 1000))
