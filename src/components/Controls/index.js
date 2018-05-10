@@ -10,7 +10,7 @@ export default props => {
       <button>
         <img src={minus} alt="minus a minute" />
       </button>
-      <button>
+      <button onClick={props.onPause}>
         <img src={playPause} alt="Play or Pause" />
       </button>
       <button>

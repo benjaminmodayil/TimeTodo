@@ -12,8 +12,10 @@ class Timer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentTime: null
+      currentTime: null,
+      isPaused: false
     }
+    this.playPause = this.playPause.bind(this)
   }
   cancel() {
     this.props.dispatch(cancelTimer())
@@ -35,6 +37,12 @@ class Timer extends Component {
     })
   }
 
+  playPause = () => {
+    this.setState({
+      isPaused: !this.state.isPaused
+    })
+  }
+
   render() {
     let startTime = this.props.currentTask.time * 60 || 1500
     let type =
@@ -42,6 +50,8 @@ class Timer extends Component {
         <CountDown
           update={currentTime => this.updateTime(currentTime)}
           startTime={startTime}
+          isPaused={this.state.isPaused}
+          // pass in state as a prop // isPaused, then inside will react based on controls
         />
       ) : (
         <CountUp />
@@ -57,7 +67,7 @@ class Timer extends Component {
         </header>
         <section className="timer-and-controls flex flex-col justify-center text-white">
           <div className="text-center mb-16">{type}</div>
-          <Controls />
+          <Controls onPause={this.playPause} />
         </section>
         <section className="timer-queue flex justify-center text-white">
           <ul>{tasks}</ul>
