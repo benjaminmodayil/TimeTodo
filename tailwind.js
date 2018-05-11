@@ -44,13 +44,13 @@ View the full documentation at https://tailwindcss.com.
 
 let colors = {
   transparent: 'transparent',
-  'red-lightest': '#FFE6E9',
-  'red-lighter': '#FF99A9',
-  'red-light': '#FF4D68',
-  red: '#FF0027',
-  'red-dark': '#E60023',
-  'red-darker': '#990017',
-  'red-darkest': '#4D000C',
+  'red-lightest': '#FFE7EB',
+  'red-lighter': '#FFA1AF',
+  'red-light': '#FF5A74',
+  red: '#FF1338',
+  'red-dark': '#E61132',
+  'red-darker': '#990B22',
+  'red-darkest': '#4D0611',
 
   'green-lightest': '#E6F8EA',
   'green-lighter': '#9CE5A9',

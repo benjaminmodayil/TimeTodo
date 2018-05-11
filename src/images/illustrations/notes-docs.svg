@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="472" height="429" viewBox="0 0 472 429">
+  <defs>
+    <linearGradient id="notes-docs-a" x1="50%" x2="50%" y1="100%" y2="0%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="notes-docs-b" x1="44150%" x2="44150%" y1="9100%" y2="4498%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="notes-docs-c" x1="60472%" x2="60472%" y1="10689%" y2="5250%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="notes-docs-d" x1="30850%" x2="30850%" y1="22700%" y2="14500%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="notes-docs-e" x1="30878%" x2="30878%" y1="38950%" y2="30750%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="notes-docs-f" x1="30906%" x2="30906%" y1="55000%" y2="46800%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="notes-docs-g" x1="30850%" x2="30850%" y1="20563%" y2="16537%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="notes-docs-h" x1="79650%" x2="79650%" y1="19300%" y2="4200%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="notes-docs-i" x1="79650%" x2="79650%" y1="17600%" y2="6900%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="notes-docs-j" x1="62800%" x2="62800%" y1="79500%" y2="62000%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="notes-docs-k" x1="10200%" x2="10200%" y1="46425%" y2="31975%">
+      <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+      <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(.566 .333)">
+    <rect width="211.77" height="292.598" x=".269" fill="url(#notes-docs-a)" fill-rule="nonzero" opacity=".5" transform="translate(131.48 29.637)"/>
+    <rect width="206.381" height="286.132" x="134.444" y="31.792" fill="#FFF" fill-rule="nonzero"/>
+    <rect width="102.382" height="24.798" x="186.713" y="24.238" fill="url(#notes-docs-b)" fill-rule="nonzero"/>
+    <path fill="url(#notes-docs-c)" fill-rule="nonzero" d="M237.904474,0 C229.999472,0 223.592486,6.56325367 223.592486,14.6568555 C223.592486,22.7504573 229.999472,29.313711 237.904474,29.313711 C245.809477,29.313711 252.216462,22.7504573 252.216462,14.6568555 C252.216462,6.56325367 245.809477,0 237.904474,0 Z M237.904474,23.1114901 C234.466214,23.2013668 231.316193,21.1994215 229.937683,18.0483231 C228.559172,14.8972248 229.22696,11.2251035 231.6266,8.76107477 C234.026241,6.29704607 237.679397,5.53228171 240.865884,6.82689126 C244.052371,8.12150081 246.137004,11.2174209 246.138178,14.6568555 C246.192133,19.262397 242.50983,23.0435052 237.904474,23.1114901 Z"/>
+    <rect width="100.227" height="23.71" x="187.791" y="24.248" fill="#FF1338" fill-rule="nonzero"/>
+    <path fill="#FF1338" fill-rule="nonzero" d="M237.904474,1.07770996 C230.166838,1.07770996 223.894245,7.35030337 223.894245,15.0879395 C223.894245,22.8255756 230.166838,29.098169 237.904474,29.098169 C245.64211,29.098169 251.914704,22.8255756 251.914704,15.0879395 C251.914704,11.3721956 250.43863,7.80863888 247.811202,5.18121118 C245.183775,2.55378348 241.620218,1.07770996 237.904474,1.07770996 Z M237.904474,23.1707642 C233.440453,23.1707642 229.821649,19.5519603 229.821649,15.0879395 C229.821649,10.6239186 233.440453,7.00511475 237.904474,7.00511475 C242.368495,7.00511475 245.987299,10.6239186 245.987299,15.0879395 C245.987299,19.5519603 242.368495,23.1707642 237.904474,23.1707642 Z"/>
+    <rect width="44.186" height="44.186" x="144.144" y="78.134" fill="url(#notes-docs-d)" fill-rule="nonzero"/>
+    <rect width="44.186" height="44.186" x="144.295" y="165.698" fill="url(#notes-docs-e)" fill-rule="nonzero"/>
+    <rect width="44.186" height="44.186" x="144.445" y="252.184" fill="url(#notes-docs-f)" fill-rule="nonzero"/>
+    <rect width="40.953" height="40.953" x="145.76" y="79.751" fill="#69F0AE" fill-rule="nonzero"/>
+    <rect width="40.953" height="40.953" x="145.76" y="166.506" fill="#FF1338" fill-rule="nonzero"/>
+    <rect width="40.953" height="40.953" x="145.76" y="253.262" fill="#FF1338" fill-rule="nonzero"/>
+    <rect width="56.133" height="3.917" x="213.656" y="92.392" fill="#E0E0E0" fill-rule="nonzero"/>
+    <rect width="92.683" height="3.917" x="213.656" y="98.271" fill="#E0E0E0" fill-rule="nonzero"/>
+    <rect width="86.158" height="3.917" x="213.656" y="104.145" fill="#E0E0E0" fill-rule="nonzero"/>
+    <rect width="56.133" height="3.917" x="213.656" y="179.148" fill="#E0E0E0" fill-rule="nonzero"/>
+    <rect width="92.683" height="3.917" x="213.656" y="185.027" fill="#E0E0E0" fill-rule="nonzero"/>
+    <rect width="86.158" height="3.917" x="213.656" y="190.9" fill="#E0E0E0" fill-rule="nonzero"/>
+    <rect width="56.133" height="3.917" x="213.656" y="265.903" fill="#E0E0E0" fill-rule="nonzero"/>
+    <rect width="92.683" height="3.917" x="213.656" y="271.782" fill="#E0E0E0" fill-rule="nonzero"/>
+    <rect width="86.158" height="3.917" x="213.656" y="277.656" fill="#E0E0E0" fill-rule="nonzero"/>
+    <polygon fill="url(#notes-docs-g)" fill-rule="nonzero" points="156.942 97.786 164.378 104.608 174.912 89.116 178.63 92.214 164.378 110.805 153.843 99.031"/>
+    <polygon fill="#FFF" fill-rule="nonzero" points="158.154 98.072 164.62 103.999 173.781 90.528 177.014 93.222 164.62 109.388 155.46 99.149"/>
+    <polygon fill="#FFF" fill-rule="nonzero" points="158.154 185.366 164.62 191.294 173.781 177.822 177.014 180.516 164.62 196.682 155.46 186.444"/>
+    <polygon fill="#FFF" fill-rule="nonzero" points="158.154 272.661 164.62 278.588 173.781 265.117 177.014 267.811 164.62 283.977 155.46 273.738"/>
+    <g stroke="#69F0AE" stroke-width="5" opacity=".5" transform="translate(350.795 114.776)">
+      <path d="M0,74.3619874 L3.23312989,74.3619874"/>
+      <path stroke-dasharray="11.54" d="M9.45151637,74.3619874 L80.9521838,74.3619874"/>
+      <polyline points="84.061 74.362 87.295 74.362 87.295 71.129"/>
+      <path stroke-dasharray="11.45" d="M87.2945069,64.9589679 L87.2945069,6.32076893"/>
+      <path d="M87.2945069,3.23312989 L87.2945069,0"/>
+    </g>
+    <path stroke="#69F0AE" stroke-dasharray="12" stroke-width="5" d="M124.744928 98.341034L52.5383606 98.341034 52.5383606 166.236762M166.236762 329.509821L166.236762 368.307379 274.007758 368.307379" opacity=".5"/>
+    <polygon fill="url(#notes-docs-h)" fill-rule="nonzero" points="83.285 35.074 41.761 0 .884 34.999 .517 34.794 .517 35.074 .237 35.074 .517 35.23 .517 35.354 .517 80.807 .517 81.367 83.005 81.367 82.504 81.087 83.285 81.087" opacity=".5" transform="translate(387.437 22.632)"/>
+    <polygon fill="#FFF" fill-rule="nonzero" points="469.073 102.113 389.862 102.113 389.862 57.927 429.198 24.248 469.073 57.927"/>
+    <polyline fill="#E0E0E0" fill-rule="nonzero" points="389.323 57.927 428.659 80.02 468.534 57.927"/>
+    <polygon fill="url(#notes-docs-i)" fill-rule="nonzero" points="24.259 42.284 0 57.657 0 0 47.958 0 47.958 29.324" opacity=".5" transform="translate(405.219 37.181)"/>
+    <polygon fill="#FAFAFA" fill-rule="nonzero" points="429.467 79.751 406.297 94.838 406.297 38.259 452.099 38.259 452.099 67.034"/>
+    <polygon fill="#000" fill-rule="nonzero" points="389.592 101.844 468.804 101.844 389.592 57.657" opacity=".05"/>
+    <polygon fill="#F5F5F5" fill-rule="nonzero" points="389.592 102.382 468.804 102.382 389.592 58.196"/>
+    <rect width="33.409" height="2.155" x="412.224" y="46.88" fill="#FFF" fill-rule="nonzero"/>
+    <rect width="33.409" height="2.155" x="412.224" y="51.191" fill="#FFF" fill-rule="nonzero"/>
+    <rect width="33.409" height="2.155" x="412.224" y="55.502" fill="#FF1338" fill-rule="nonzero"/>
+    <rect width="33.409" height="2.155" x="412.224" y="59.813" fill="#FFF" fill-rule="nonzero"/>
+    <rect width="33.409" height="2.155" x="412.224" y="64.124" fill="#FF1338" fill-rule="nonzero"/>
+    <polygon fill="#000" fill-rule="nonzero" points="452.099 67.357 452.099 66.279 428.53 79.379 429.171 79.734" opacity=".05"/>
+    <rect width="93.734" height="94.3" x=".011" fill="url(#notes-docs-j)" fill-rule="nonzero" opacity=".5" transform="translate(291.52 334.09)"/>
+    <rect width="89.45" height="89.989" x="293.676" y="336.246" fill="#F5F5F5" fill-rule="nonzero"/>
+    <rect width="78.673" height="68.973" x="299.603" y="338.94" fill="#FFF" fill-rule="nonzero"/>
+    <path fill="#E0E0E0" fill-rule="nonzero" d="M378.276197,385.820166 C356.533398,385.820166 338.939783,380.275349 338.939783,373.426502 C317.196985,373.426502 299.603369,378.249254 299.603369,384.203601 L299.603369,410.06864 L378.276197,410.06864 L378.276197,385.820166 Z"/>
+    <circle cx="365.344" cy="354.028" r="8.083" fill="#FF1338" fill-rule="nonzero"/>
+    <rect width="109.926" height="77.865" y=".404" fill="url(#notes-docs-k)" fill-rule="nonzero" opacity=".5" transform="translate(0 171.895)"/>
+    <rect width="103.46" height="73.284" x="3.233" y="174.589" fill="#FFF" fill-rule="nonzero"/>
+    <path fill="#E0E0E0" fill-rule="nonzero" d="M57.0916852,193.093294 C56.2267046,193.095041 55.3627392,193.152639 54.5051813,193.265727 L57.0916852,213.030928 L37.2025479,211.705345 C37.1756051,212.141817 37.1540509,212.583679 37.1540509,213.030928 C37.1540509,224.04218 46.0804339,232.968562 57.0916852,232.968562 C68.1029366,232.968562 77.0293195,224.04218 77.0293195,213.030928 C77.0293195,202.019677 68.1029366,193.093294 57.0916852,193.093294 Z"/>
+    <path fill="#FF1338" fill-rule="nonzero" d="M50.1943415,189.493743 C40.7681812,190.729033 33.5254023,198.447746 32.891708,207.93336 L52.7808454,209.258943 L50.1943415,189.493743 Z"/>
+  </g>
+</svg>

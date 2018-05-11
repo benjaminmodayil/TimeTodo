@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
-import './styles/App.css'
 import { connect } from 'react-redux'
-
-import Timer from './components/Test/timer.js'
-import Dashboard from './components/Dashboard/index.js'
-
 import { fetchTasks } from './actions/index'
+import Dashboard from './components/Dashboard/index.js'
+import Timer from './components/Test/timer.js'
+import './styles/App.css'
 
 class App extends Component {
   componentDidMount() {
@@ -31,6 +29,9 @@ class App extends Component {
     return <div className="App">{message}</div>
   }
 }
+// {dashboardOrTimer}
+
+// <div className="App">{dashboardOrTimer}</div>
 
 const mapStateToProps = state => ({
   currentTask: state.currentTask,

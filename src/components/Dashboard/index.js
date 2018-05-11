@@ -1,12 +1,11 @@
 import React from 'react'
-import './index.css'
-
-import NavBar from '../NavBar'
-import Filters from '../Filters'
-import TaskSection from '../TaskSection'
-import Log from '../Log/'
-import Completed from '../Completed/'
 import CoffeeClock from '../../images/illustrations/timer-coffee.svg'
+import Completed from '../Completed/'
+import Filters from '../Filters'
+import Log from '../Log/'
+import NavBar from '../NavBar'
+import TaskSection from '../TaskSection'
+import './index.css'
 
 export default props => {
   return (
