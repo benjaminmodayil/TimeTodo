@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import './index.css'
-import Controls from '../Controls/index'
-
-import CountDown from './countdown'
-import CountUp from './countup'
-
 import { connect } from 'react-redux'
 import { cancelTimer, toggleCheckbox } from '../../actions'
+import Controls from '../Controls/index'
+import CountDown from './countdown'
+import CountUp from './countup'
+import './index.css'
 
 class Timer extends Component {
   constructor(props) {
@@ -30,6 +28,7 @@ class Timer extends Component {
   // }
 
   done(task) {
+    console.log(this.state.currentTime)
     this.props.dispatch(toggleCheckbox(task))
   }
 
