@@ -1,12 +1,10 @@
 import React from 'react'
-import './index.css'
-
-import NavBar from '../NavBar/index.js'
-
-import Filters from '../Filters/index.js'
-import Tasks from '../Tasks/index.js'
-import Log from '../Log/index.js'
 import Completed from '../Completed/index.js'
+import Filters from '../Filters/index.js'
+import Log from '../Log/index.js'
+import NavBar from '../NavBar/index.js'
+import Tasks from '../Tasks/index.js'
+import './index.css'
 
 export default props => {
   return (
