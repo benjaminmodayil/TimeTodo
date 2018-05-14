@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import './index.css'
-
 import { connect } from 'react-redux'
 import { startTimer, toggleCheckbox } from '../../actions'
-
 import Task from '../Task'
+import './index.css'
+var dayjs = require('dayjs')
 
 class TaskContainer extends Component {
   taskPasser = task => {
@@ -12,7 +11,11 @@ class TaskContainer extends Component {
   }
 
   toggleCheckbox = (e, task) => {
-    this.props.dispatch(toggleCheckbox(task))
+    if (task.status) {
+      this.props.dispatch(toggleCheckbox({ ...task, completedOn: dayjs() }))
+    } else {
+      this.props.dispatch(toggleCheckbox({ ...task, completedOn: null }))
+    }
   }
 
   render() {

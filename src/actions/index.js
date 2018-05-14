@@ -80,7 +80,7 @@ export const toggleCheckbox = task => dispatch => {
       return res.json()
     })
     .then(task => {
-      dispatch(toggleSuccess(task))
+      dispatch(toggleSuccess({ ...task }))
     })
     .catch(err => {
       dispatch(toggleError(err))

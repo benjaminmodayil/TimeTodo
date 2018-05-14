@@ -101,7 +101,6 @@ export const taskReducer = (state = initialState, action) => {
           visible: [...visible, { ...task }],
           completed: [...items]
         }
-        console.log(...task)
       } else {
         let items = state.allTasks.filter(item => item._id !== task._id)
         let visible = state.visible.filter(item => item._id !== task._id)
@@ -112,7 +111,6 @@ export const taskReducer = (state = initialState, action) => {
           visible: [...visible],
           completed: [...state.completed, { ...task }]
         }
-        console.log(...task)
       }
       return Object.assign({}, state, newState)
 

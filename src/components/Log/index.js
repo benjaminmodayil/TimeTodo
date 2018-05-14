@@ -1,16 +1,18 @@
 import React from 'react'
 import './index.css'
+var dayjs = require('dayjs')
 
 export default props => {
   let completed = props.logs.map((i, index) => {
-    // console.log(i)
     let message = Number.isInteger(i.timeToComplete[0])
       ? `${i.timeToComplete[0]} mins ${i.timeToComplete[1]} secs`
       : 'N/A'
+    let date = dayjs(i.completedOn).format('MM-DD')
+
     return (
       <div className="flex p-2 rounded" key={index}>
         <span>{i.title}</span>
-        <span>11/16</span>
+        <span>{date}</span>
         <span>{message}</span>
       </div>
     )

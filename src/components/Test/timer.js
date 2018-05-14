@@ -21,7 +21,6 @@ class Timer extends Component {
   }
 
   done(task) {
-    // this.props.dispatch(toggleCheckbox(task))
     this.setState({
       done: true
     })
@@ -80,7 +79,6 @@ class Timer extends Component {
           </button>
           <button
             className="bg-green text-white w-1-2 ml-2 px-2 rounded text-xl"
-            // onClick={() => this.done(this.props.currentTask)}
             onClick={() => this.done()}
           >
             Done
