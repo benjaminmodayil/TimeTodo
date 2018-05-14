@@ -2,13 +2,19 @@ import React from 'react'
 import './index.css'
 
 export default props => {
-  let completed = props.logs.map((i, index) => (
-    <div className="flex p-2 rounded" key={index}>
-      <span>{i.title}</span>
-      <span>11/16</span>
-      <span>2hrs 35mins</span>
-    </div>
-  ))
+  let completed = props.logs.map((i, index) => {
+    // console.log(i)
+    let message = Number.isInteger(i.timeToComplete[0])
+      ? `${i.timeToComplete[0]} mins ${i.timeToComplete[1]} secs`
+      : 'N/A'
+    return (
+      <div className="flex p-2 rounded" key={index}>
+        <span>{i.title}</span>
+        <span>11/16</span>
+        <span>{message}</span>
+      </div>
+    )
+  })
   return (
     <section className="w-full md-w-1-2 px-2 mx-auto">
       <div className="flex">

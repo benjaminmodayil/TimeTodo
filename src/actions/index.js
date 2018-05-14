@@ -56,6 +56,7 @@ export const doneTimer = task => ({
 
 export const TOGGLE_CHECKBOX = 'TOGGLE_CHECKBOX'
 export const toggleCheckbox = task => dispatch => {
+  console.log(task)
   let toggledTask = {
     ...task,
     status: !task.status

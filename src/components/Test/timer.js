@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { cancelTimer, toggleCheckbox } from '../../actions'
+import { cancelTimer } from '../../actions'
 import Controls from '../Controls/index'
 import CountDown from './countdown'
 import CountUp from './countup'
@@ -11,25 +11,20 @@ class Timer extends Component {
     super(props)
     this.state = {
       currentTime: null,
-      isPaused: false
-      // currentTask: this.props.currentTask
+      isPaused: false,
+      done: false
     }
-    // console.log(this.state.currentTask)
     this.playPause = this.playPause.bind(this)
   }
   cancel() {
     this.props.dispatch(cancelTimer())
   }
 
-  // addTimeToTask(time, task) {
-
-  //   let newTask;
-  //     this.done(newTask)
-  // }
-
   done(task) {
-    console.log(this.state.currentTime)
-    this.props.dispatch(toggleCheckbox(task))
+    // this.props.dispatch(toggleCheckbox(task))
+    this.setState({
+      done: true
+    })
   }
 
   updateTime(currentTime) {
@@ -43,15 +38,18 @@ class Timer extends Component {
       isPaused: !this.state.isPaused
     })
   }
+  // click done button -> send a signal to pause the timer, done button acually changes state in timerjs to a true/false value, it then passes that state into countdown and into an if/else statement that pauses state and returns the latest time value
 
   render() {
     let startTime = this.props.currentTask.time * 60 || 1500
     let type =
       this.props.type === 'countdown' ? (
         <CountDown
+          task={this.props.currentTask}
           update={currentTime => this.updateTime(currentTime)}
           startTime={startTime}
           isPaused={this.state.isPaused}
+          isDone={this.state.done}
           // pass in state as a prop // isPaused, then inside will react based on controls
         />
       ) : (
@@ -82,7 +80,8 @@ class Timer extends Component {
           </button>
           <button
             className="bg-green text-white w-1-2 ml-2 px-2 rounded text-xl"
-            onClick={() => this.done(this.props.currentTask)}
+            // onClick={() => this.done(this.props.currentTask)}
+            onClick={() => this.done()}
           >
             Done
           </button>

@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { toggleCheckbox } from '../../actions'
 import convertTime from './convert-time'
 
 class CountDown extends Component {
   constructor(props) {
     super(props)
-    console.log(props)
     this.state = {
       time: props.startTime * 10,
       timerActive: false,
@@ -39,22 +40,37 @@ class CountDown extends Component {
 
   stopTimer() {
     clearInterval(this.time)
-    this.setState({ timerActive: false })
+    // this.setState({ timerActive: false })
   }
 
   componentDidUpdate() {
-    if (this.state.isPaused && !this.state.timerActive) {
+    if (!this.props.isDone) {
+      if (this.state.isPaused && !this.state.timerActive) {
+        clearInterval(this.time)
+        console.log('is paused', convertTime(Math.floor(this.state.time / 10) * 1000))
+        this.setState({ timerActive: true })
+      } else if (!this.state.isPaused && this.state.timerActive) {
+        this.stopTime = Date.now() + this.state.time * 100
+        this.startTimer()
+        console.log('is going', convertTime(Math.floor(this.state.time / 10) * 1000))
+        this.setState({ timerActive: false })
+      }
+    } else {
       clearInterval(this.time)
-      console.log('is paused', convertTime(Math.floor(this.state.time / 10) * 1000))
-      this.setState({ timerActive: true })
-    } else if (!this.state.isPaused && this.state.timerActive) {
-      this.stopTime = Date.now() + this.state.time * 100
-      this.startTimer()
-      console.log('is going', convertTime(Math.floor(this.state.time / 10) * 1000))
-      this.setState({ timerActive: false })
+      let time = convertTime(
+        this.props.startTime / 10 * 10000 - Math.floor(this.state.time / 10) * 1000
+      )
+
+      time = time.split(':')
+      let newTask = {
+        ...this.props.task,
+        timeToComplete: [Number(time[0]), Number(time[1])]
+      }
+      console.log(newTask)
+      // console.log('you fucked')
+      this.props.dispatch(toggleCheckbox(newTask))
     }
   }
-
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.isPaused) {
       // console.log(prevState)
@@ -106,4 +122,4 @@ class CountDown extends Component {
   }
 }
 
-export default CountDown
+export default connect()(CountDown)
