@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { sortFilter } from '../../actions'
+import { sortFilter } from '../../actions/index'
 
 export class Filters extends Component {
   filter = e => {
@@ -8,7 +8,7 @@ export class Filters extends Component {
   }
 
   render() {
-    let { categories } = this.props
+    let categories = this.props.filters
     categories = categories.map((item, index) => {
       let highlightClass =
         this.props.currentFilter === item
@@ -33,7 +33,8 @@ export class Filters extends Component {
 }
 
 const mapStateToProps = state => ({
-  currentFilter: state.currentFilter
+  currentFilter: state.protectedData.currentFilter,
+  filters: state.protectedData.filters
 })
 
 export default connect(mapStateToProps)(Filters)

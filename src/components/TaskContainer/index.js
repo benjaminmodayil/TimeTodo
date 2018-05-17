@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { startTimer, toggleCheckbox } from '../../actions'
+import { startTimer, toggleCheckbox } from '../../actions/index'
 import Task from '../Task'
 import './index.css'
 var dayjs = require('dayjs')
@@ -19,7 +19,9 @@ class TaskContainer extends Component {
   }
 
   render() {
-    let items = this.props.items.map(item => {
+    let filterType =
+      this.props.currentFilter === 'all' ? this.props.allTasks : this.props.visible
+    let items = filterType.map(item => {
       return (
         // if task.id matches, repalce with
         // li > form
@@ -44,4 +46,10 @@ class TaskContainer extends Component {
   }
 }
 
-export default connect()(TaskContainer)
+const mapStateToProps = state => ({
+  allTasks: state.protectedData.allTasks,
+  visible: state.protectedData.visible,
+  currentFilter: state.protectedData.currentFilter
+})
+
+export default connect(mapStateToProps)(TaskContainer)

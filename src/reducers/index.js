@@ -1,6 +1,6 @@
 import { initialState } from '../utils.js'
 
-export const taskReducer = (state = initialState, action) => {
+export default function(state = initialState, action) {
   switch (action.type) {
     case 'ADD_TASK_SUCCESS':
       let visible = state.currentFilter === action.task.filter

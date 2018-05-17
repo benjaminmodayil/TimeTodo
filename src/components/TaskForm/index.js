@@ -15,6 +15,7 @@ class TaskForm extends Component {
     e.target.reset()
     return data
   }
+
   render() {
     let filterOptions = this.props.filters.map((name, index) => {
       let preSelected = index === 0
@@ -98,9 +99,9 @@ class TaskForm extends Component {
 }
 
 const mapStateToProps = state => ({
-  currentTask: state.currentTask,
-  timer: state.timer,
-  filters: state.filters,
-  logs: state.logs
+  currentTask: state.protectedData.currentTask,
+  timer: state.protectedData.timer,
+  filters: state.protectedData.filters,
+  logs: state.protectedData.logs
 })
 export default connect(mapStateToProps)(TaskForm)

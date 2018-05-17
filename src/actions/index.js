@@ -1,12 +1,15 @@
 import { API_BASE_URL } from '../config'
+import { normalizeResponseErrors } from './utils'
 
 export const ADD_TASK = 'ADD_TASK'
-export const addTask = task => dispatch => {
+export const addTask = task => (dispatch, getState) => {
+  const authToken = getState().auth.authToken
+  console.log(task)
   let meta = {
     body: JSON.stringify(task),
     headers: {
-      'content-type': 'application/json'
-      // Authorization: 'Bearer ' + jwt
+      'content-type': 'application/json',
+      Authorization: `Bearer ${authToken}`
     },
     method: 'POST',
     credentials: 'same-origin'
@@ -14,17 +17,27 @@ export const addTask = task => dispatch => {
 
   fetch(`${API_BASE_URL}/tasks`, meta)
     .then(res => {
+      return normalizeResponseErrors(res)
+    })
+    .then(res => {
+      console.log('before if')
       if (!res.ok) {
+        console.log(res, 'no okay')
         return Promise.reject(res.statusText)
       }
+      console.log(res, 'ok')
+
       return res.json()
     })
     .then(task => {
+      console.log('test', 'working?', task)
       dispatch(addSuccess(task))
     })
     .catch(err => {
+      console.log('error 😢', err)
       dispatch(addError(err))
     })
+  console.log('after all the mess')
 }
 
 export const addSuccess = task => ({
@@ -55,8 +68,9 @@ export const doneTimer = task => ({
 })
 
 export const TOGGLE_CHECKBOX = 'TOGGLE_CHECKBOX'
-export const toggleCheckbox = task => dispatch => {
+export const toggleCheckbox = task => (dispatch, getState) => {
   console.log(task)
+  const authToken = getState().auth.authToken
   let toggledTask = {
     ...task,
     status: !task.status
@@ -65,8 +79,8 @@ export const toggleCheckbox = task => dispatch => {
   let meta = {
     body: JSON.stringify(toggledTask),
     headers: {
-      'content-type': 'application/json'
-      // Authorization: 'Bearer ' + jwt
+      'content-type': 'application/json',
+      Authorization: `Bearer ${authToken}`
     },
     method: 'PUT',
     credentials: 'same-origin'
@@ -97,12 +111,14 @@ export const updateError = err => ({
   err
 })
 
-export const updateTask = task => dispatch => {
+export const updateTask = task => (dispatch, getState) => {
+  const authToken = getState().auth.authToken
+
   let meta = {
     body: JSON.stringify(task),
     headers: {
-      'content-type': 'application/json'
-      // Authorization: 'Bearer ' + jwt
+      'content-type': 'application/json',
+      Authorization: `Bearer ${authToken}`
     },
     method: 'PUT',
     credentials: 'same-origin'
@@ -158,27 +174,37 @@ export const deleteError = err => ({
   err
 })
 
-export const fetchTasks = () => dispatch => {
-  fetch(`${API_BASE_URL}/tasks`)
+export const fetchTasks = () => (dispatch, getState) => {
+  const authToken = getState().auth.authToken
+
+  fetch(`${API_BASE_URL}/tasks`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${authToken}`
+    }
+  })
     .then(res => {
-      if (!res.ok) {
-        return Promise.reject(res.statusText)
-      }
+      return normalizeResponseErrors(res)
+    })
+    .then(res => {
       return res.json()
     })
-    .then(task => {
-      dispatch(fetchTasksSuccess(task))
+    .then(res => {
+      console.log(res, 'receiving')
+      dispatch(fetchTasksSuccess(res))
     })
     .catch(err => {
+      console.log(err, 'error')
       dispatch(fetchTasksError(err))
     })
 }
 
-export const deleteTask = taskID => dispatch => {
+export const deleteTask = taskID => (dispatch, getState) => {
+  const authToken = getState().auth.authToken
   let meta = {
     headers: {
-      'content-type': 'application/json'
-      // Authorization: 'Bearer ' + jwt
+      'content-type': 'application/json',
+      Authorization: `Bearer ${authToken}`
     },
     method: 'DELETE',
     credentials: 'same-origin'

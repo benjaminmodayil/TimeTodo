@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { Link, Redirect } from 'react-router-dom'
 import Image from '../../images/illustrations/notes-docs.svg'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-export default class Home extends Component {
+export class Home extends Component {
   render() {
+    if (this.props.loggedIn) {
+      return <Redirect to="/dashboard" />
+    }
+
     return (
       <React.Fragment>
         <main className="bg-red py-16 md-py-0">
@@ -45,3 +50,9 @@ export default class Home extends Component {
     )
   }
 }
+
+const mapStateToProps = state => ({
+  loggedIn: state.auth.currentUser !== null
+})
+
+export default connect(mapStateToProps)(Home)
