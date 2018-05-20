@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { Field, focus, reduxForm } from 'redux-form'
 import { login } from '../../actions/auth'
 import { registerUser } from '../../actions/users'
@@ -32,37 +32,78 @@ export class Signup extends Component {
           <h1 className="screenreader-only">Signup page</h1>
 
           <form
-            className="login-form"
+            className="register-form bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-xs mx-auto my-32"
             onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
           >
-            <label htmlFor="firstName">First name</label>
-            <Field component={Input} type="text" name="firstName" />
-            <label htmlFor="lastName">Last name</label>
-            <Field component={Input} type="text" name="lastName" />
-            <label htmlFor="username">Username</label>
-            <Field
-              component={Input}
-              type="text"
-              name="username"
-              validate={[required, nonEmpty, isTrimmed]}
-            />
-            <label htmlFor="password">Password</label>
-            <Field
-              component={Input}
-              type="password"
-              name="password"
-              validate={[required, passwordLength, isTrimmed]}
-            />
-            <label htmlFor="passwordConfirm">Confirm password</label>
-            <Field
-              component={Input}
-              type="password"
-              name="passwordConfirm"
-              validate={[required, nonEmpty, matchesPassword]}
-            />
-            <button type="submit" disabled={this.props.pristine || this.props.submitting}>
-              Register
-            </button>
+            <div className="mb-8">
+              <div className="mb-4">
+                <label htmlFor="firstName">First name</label>
+                <Field
+                  component={Input}
+                  type="text"
+                  name="firstName"
+                  classes="w-full mt-2 border rounded border-black"
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="lastName">Last name</label>
+                <Field
+                  component={Input}
+                  type="text"
+                  name="lastName"
+                  classes="w-full mt-2 border rounded border-black"
+                />
+              </div>
+            </div>
+
+            <div className="mb-8">
+              <label htmlFor="username">Username</label>
+              <Field
+                component={Input}
+                type="text"
+                name="username"
+                validate={[required, nonEmpty, isTrimmed]}
+                classes="w-full mt-2 border rounded border-black"
+              />
+            </div>
+            <div className="mb-8">
+              <label htmlFor="password">Password</label>
+              <Field
+                component={Input}
+                type="password"
+                name="password"
+                validate={[required, passwordLength, isTrimmed]}
+                classes="w-full mt-2 border rounded border-black"
+              />
+            </div>
+
+            <div className="mb-8">
+              <label htmlFor="passwordConfirm">Confirm password</label>
+              <Field
+                component={Input}
+                type="password"
+                name="passwordConfirm"
+                validate={[required, nonEmpty, matchesPassword]}
+                classes="w-full mt-2 border rounded border-black"
+              />
+            </div>
+            <div className="mb-4 flex flex-col">
+              <button
+                type="submit"
+                className="bg-red text-white font-bold py-2 px-4 rounded mb-4 hover-bg-red-dark"
+                disabled={this.props.pristine || this.props.submitting}
+              >
+                Register
+              </button>
+
+              <Link
+                to="/login"
+                className="inline-block text-center align-baseline font-bold text-sm text-blue hover-text-blue-darker"
+                title="Login to TaskTodo"
+              >
+                Login
+              </Link>
+            </div>
           </form>
         </main>
       </React.Fragment>

@@ -7,6 +7,7 @@ import Filters from '../Filters'
 import Log from '../Log/'
 import NavBar from '../NavBar'
 import TaskSection from '../TaskSection'
+import requiresLogin from '../requires-login'
 import './index.css'
 
 export class Dashboard extends Component {
@@ -42,11 +43,10 @@ const mapStateToProps = state => ({
   timer: state.protectedData.timer,
   filters: state.protectedData.filters,
   completed: state.protectedData.completed,
-  logs: state.protectedData.logs
+  logs: state.protectedData.logs,
   // error: state.error,
-  // hasAuthToken: state.auth.authToken !== null,
+  hasAuthToken: state.auth.authToken !== null
   // loggedIn: state.auth.currentUser !== null
 })
 
-export default connect(mapStateToProps)(Dashboard)
-// withRouter
+export default requiresLogin()(connect(mapStateToProps)(Dashboard))

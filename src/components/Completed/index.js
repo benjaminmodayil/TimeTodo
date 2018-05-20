@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import './index.css'
-
-import TaskContainer from '../TaskContainer/index'
-
 import { connect } from 'react-redux'
+import TaskContainer from '../TaskContainer/index'
+import './index.css'
 
 export class Completed extends Component {
   render() {
@@ -18,7 +16,7 @@ export class Completed extends Component {
   }
 }
 const mapStateToProps = state => ({
-  completed: state.completed
+  completed: state.protectedData.completed
 })
 
 export default connect(mapStateToProps)(Completed)

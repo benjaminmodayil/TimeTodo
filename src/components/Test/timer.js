@@ -92,8 +92,8 @@ class Timer extends Component {
 // change from all tasks to filtered
 
 const mapStateToProps = state => ({
-  currentTask: state.currentTask,
-  visible: state.visible
+  currentTask: state.protectedData.currentTask,
+  visible: state.protectedData.visible
 })
 
 export default connect(mapStateToProps)(Timer)

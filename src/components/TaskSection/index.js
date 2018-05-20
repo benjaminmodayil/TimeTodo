@@ -13,8 +13,10 @@ export class TaskSection extends Component {
   }
 
   render() {
+    let filterType =
+      this.props.currentFilter === 'all' ? this.props.allTasks : this.props.visible
     return (
-      <section className="w-full">
+      <section className="w-full mb-16">
         <h2 className="mb-8 capitalize">{this.props.currentFilter}</h2>
         <TaskForm onSubmit={data => this.formHandler(data)} />
 
@@ -22,7 +24,7 @@ export class TaskSection extends Component {
           <div className="flex mb-8">
             <h3>Tasks</h3>
           </div>
-          <TaskContainer />
+          <TaskContainer items={filterType} />
         </article>
       </section>
     )

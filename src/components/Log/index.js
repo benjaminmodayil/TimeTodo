@@ -17,14 +17,17 @@ export default props => {
       </div>
     )
   })
+
+  let renderValue =
+    completed > 0 ? (
+      completed
+    ) : (
+      <p className="italic text-center mt-4"> No items found. </p>
+    )
   return (
     <section className="w-full md-w-1-2 px-2 mx-auto">
       <div className="flex">
         <h2 className="mb-8">Time Logged</h2>
-        <nav>
-          <a href="">Graph</a>
-          <a href="">Log</a>
-        </nav>
       </div>
 
       <div className="log__table">
@@ -33,8 +36,12 @@ export default props => {
           <span>Date</span>
           <span>Time</span>
         </div>
-        {completed}
+        {renderValue}
       </div>
     </section>
   )
 }
+// <nav>
+// <a href="">Graph</a>
+// <a href="">Log</a>
+// </nav>

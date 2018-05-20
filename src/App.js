@@ -80,8 +80,8 @@ class App extends Component {
 
 const mapStateToProps = state => ({
   // protectedData: state.protectedData,
-  // currentTask: state.protectedData.currentTask,
-  // timer: state.protectedData.timer,
+  currentTask: state.protectedData.currentTask,
+  timer: state.protectedData.timer,
   // filters: state.protectedData.filters,
   // completed: state.protectedData.completed,
   // logs: state.protectedData.logs,

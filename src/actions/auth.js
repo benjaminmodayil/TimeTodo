@@ -65,7 +65,7 @@ export const login = (username, password) => dispatch => {
       .then(({ authToken }) => storeAuthInfo(authToken, dispatch))
       .catch(err => {
         const { code } = err
-        console.log('fucking 401', err)
+        console.log(err)
         const message =
           code === 401
             ? 'Incorrect username or password'
@@ -80,6 +80,12 @@ export const login = (username, password) => dispatch => {
         )
       })
   )
+}
+
+export const logout = () => (dispatch, getState) => {
+  const authToken = getState().auth.authToken
+  dispatch(clearAuth())
+  clearAuthToken(authToken)
 }
 
 export const refreshAuthToken = () => (dispatch, getState) => {

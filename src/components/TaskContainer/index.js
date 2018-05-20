@@ -19,9 +19,7 @@ class TaskContainer extends Component {
   }
 
   render() {
-    let filterType =
-      this.props.currentFilter === 'all' ? this.props.allTasks : this.props.visible
-    let items = filterType.map(item => {
+    let items = this.props.items.map(item => {
       return (
         // if task.id matches, repalce with
         // li > form
