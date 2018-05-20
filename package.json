@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "autoprefixer": "7.1.6",
+    "autoprefixer": "^8.5.0",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
@@ -41,6 +41,7 @@
     "react-router-dom": "^4.2.2",
     "redux": "^4.0.0",
     "redux-form": "^7.3.0",
+    "redux-thunk": "^2.2.0",
     "resolve": "1.6.0",
     "style-loader": "0.19.0",
     "sw-precache-webpack-plugin": "0.11.4",
@@ -51,8 +52,10 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build:css": "postcss src/styles/App.css -o src/App.css",
+    "watch:css": "postcss src/styles/App.css -o src/App.css -w",
+    "start": "npm run watch:css & node scripts/start.js",
+    "build": "npm run build:css && node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
@@ -99,10 +102,11 @@
   },
   "devDependencies": {
     "cssnano": "^3.10.0",
+    "postcss-cli": "^5.0.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^11.1.0",
     "postcss-nested": "^3.0.0",
     "react-redux": "^5.0.7",
-    "tailwindcss": "^0.5.2"
+    "tailwindcss": "^0.5.3"
   }
 }
