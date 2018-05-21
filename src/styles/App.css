@@ -1,10 +1,9 @@
 /* http://nerdcave.com/tailwind-cheat-sheet */
 
-@tailwind preflight;
-@tailwind components;
+@import 'base/tw-preflight-and-components.css';
 @import 'vendor/_wtf-forms.css';
 
-@tailwind utilities;
+@import 'base/tw-utilities.css';
 
 @import 'base/_typography.css';
 @import 'vendor/_normalize.css';

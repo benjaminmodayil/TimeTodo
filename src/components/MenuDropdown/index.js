@@ -59,21 +59,23 @@ export class MenuDropdown extends Component {
               </div>
             ) : null}
 */}
-              <div className="dropdown-menu mt-4 block">
-                <a
-                  // {...getItemProps({ item })}
-                  href={'#' + 'logout'}
-                  onClick={e => {
-                    e.preventDefault()
-                    this.props.dispatch(logout())
-                  }}
-                  key={'logout'}
-                  className="dropdown-item px-4 text-center py-2 mb-1"
-                  style={{ cursor: 'pointer' }}
-                >
-                  {'/logout'}
-                </a>
-              </div>
+              {isOpen ? (
+                <div className="dropdown-menu mt-4 block">
+                  <a
+                    // {...getItemProps({ item })}
+                    href={'#' + 'logout'}
+                    onClick={e => {
+                      e.preventDefault()
+                      this.props.dispatch(logout())
+                    }}
+                    key={'logout'}
+                    className="dropdown-item px-4 text-center py-2 mb-1"
+                    style={{ cursor: 'pointer' }}
+                  >
+                    {'/logout'}
+                  </a>
+                </div>
+              ) : null}
             </div>
           </div>
         )}
