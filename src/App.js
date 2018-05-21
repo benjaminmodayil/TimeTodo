@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Route, withRouter } from 'react-router-dom'
-import './App.css'
 import { refreshAuthToken } from './actions/auth'
 import Dashboard from './components/Dashboard/index.js'
 import Timer from './components/Test/timer.js'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import './styles/generated.css'
 
 class App extends Component {
   // componentDidMount() {

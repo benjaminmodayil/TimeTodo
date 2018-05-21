@@ -52,19 +52,15 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "build:css": "postcss src/styles/App.css -o src/App.css",
-    "watch:css": "postcss src/styles/App.css -o src/App.css -w",
+    "build:css": "postcss src/styles/App.css -o src/styles/generated.css",
+    "watch:css": "postcss src/styles/App.css -o src/styles/generated.css -w",
     "start": "npm run watch:css & node scripts/start.js",
     "build": "npm run build:css && node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
+    "collectCoverageFrom": ["src/**/*.{js,jsx,mjs}"],
+    "setupFiles": ["<rootDir>/config/polyfills.js"],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
@@ -76,31 +72,20 @@
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
-    ],
+    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node",
-      "mjs"
-    ]
+    "moduleFileExtensions": ["web.js", "js", "json", "web.jsx", "jsx", "node", "mjs"]
   },
   "babel": {
-    "presets": [
-      "react-app"
-    ]
+    "presets": ["react-app"]
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "devDependencies": {
+    "autoprefixer": "^8.5.0",
     "cssnano": "^3.10.0",
     "postcss-cli": "^5.0.0",
     "postcss-cssnext": "^3.1.0",
