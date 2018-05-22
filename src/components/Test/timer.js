@@ -36,7 +36,6 @@ class Timer extends Component {
       isPaused: !this.state.isPaused
     })
   }
-  // click done button -> send a signal to pause the timer, done button acually changes state in timerjs to a true/false value, it then passes that state into countdown and into an if/else statement that pauses state and returns the latest time value
 
   render() {
     let startTime = this.props.currentTask.time * 60 || 1500

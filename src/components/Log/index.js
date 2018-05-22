@@ -7,7 +7,9 @@ export default props => {
       ? `${i.timeToComplete[0]} mins ${i.timeToComplete[1]} secs`
       : 'N/A'
     let date = dayjs(i.completedOn).format('MM-DD')
+    let date1 = dayjs(i.completedOn)
 
+    console.log(date1)
     return (
       <div className="flex p-2 rounded" key={index}>
         <span>{i.title}</span>
@@ -18,7 +20,7 @@ export default props => {
   })
 
   let renderValue =
-    completed > 0 ? (
+    completed.length > 0 ? (
       completed
     ) : (
       <p className="italic text-center mt-4"> No items found. </p>

@@ -11,9 +11,15 @@ class TaskContainer extends Component {
 
   toggleCheckbox = (e, task) => {
     if (task.status) {
-      this.props.dispatch(toggleCheckbox({ ...task, completedOn: dayjs() }))
+      this.props.dispatch(toggleCheckbox({ ...task }))
     } else {
-      this.props.dispatch(toggleCheckbox({ ...task, completedOn: null }))
+      let newTask = {
+        ...task,
+        completedOn: dayjs()
+      }
+      this.props.dispatch(toggleCheckbox(newTask))
+
+      // this.props.dispatch(toggleCheckbox({ ...task, completedOn: null }))
     }
   }
 
