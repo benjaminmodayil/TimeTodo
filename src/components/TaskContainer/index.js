@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { startTimer, toggleCheckbox } from '../../actions/index'
 import Task from '../Task'
-import './index.css'
 var dayjs = require('dayjs')
 
 class TaskContainer extends Component {

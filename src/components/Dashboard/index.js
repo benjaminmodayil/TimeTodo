@@ -8,7 +8,6 @@ import Log from '../Log/'
 import NavBar from '../NavBar'
 import TaskSection from '../TaskSection'
 import requiresLogin from '../requires-login'
-import './index.css'
 
 export class Dashboard extends Component {
   componentDidMount() {

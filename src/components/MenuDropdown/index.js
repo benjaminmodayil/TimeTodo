@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { logout } from '../../actions/auth'
 import Menu from '../../images/icons/icon-menu-user.svg'
-import './index.css'
 
 export class MenuDropdown extends Component {
   render() {

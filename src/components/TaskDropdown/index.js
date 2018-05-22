@@ -1,6 +1,5 @@
-import React from 'react'
 import Downshift from 'downshift'
-import './index.css'
+import React from 'react'
 import Options from '../../images/icons/icon-options.svg'
 import Buttons from './Buttons'
 

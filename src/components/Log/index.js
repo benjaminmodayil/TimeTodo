@@ -1,5 +1,4 @@
 import React from 'react'
-import './index.css'
 var dayjs = require('dayjs')
 
 export default props => {

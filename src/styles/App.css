@@ -8,3 +8,9 @@
 @import 'base/_typography.css';
 @import 'vendor/_normalize.css';
 @import 'base/_global.css';
+
+@import 'components/Log.css';
+@import 'components/MenuDropdown.css';
+@import 'components/TaskDropdown.css';
+@import 'components/TaskForm.css';
+@import 'components/TimerControls.css';

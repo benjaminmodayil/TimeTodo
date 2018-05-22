@@ -4,7 +4,6 @@ import { cancelTimer } from '../../actions'
 import Controls from '../Controls/index'
 import CountDown from './countdown'
 import CountUp from './countup'
-import './index.css'
 
 class Timer extends Component {
   constructor(props) {

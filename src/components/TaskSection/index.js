@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { addTask } from '../../actions/index'
 import TaskContainer from '../TaskContainer/index'
 import TaskForm from '../TaskForm/index'
-import './index.css'
 
 export class TaskSection extends Component {
   formHandler(data) {

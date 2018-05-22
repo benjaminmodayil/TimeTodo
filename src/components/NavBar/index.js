@@ -1,20 +1,35 @@
-import React from 'react'
-import MenuDropdown from '../MenuDropdown'
-import './index.css'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { logout } from '../../actions/auth'
 
-export default () => {
-  return (
-    <nav className="bg-red mb-16">
-      <div className="nav-inner container mx-auto flex justify-between items-center px-2 md-px-0 py-2">
-        <a href="/" className={'text-xl font-semibold ' + sharedStyles}>
-          TaskTodo
-        </a>
-        <div className="relative w-6 h-6">
-          <MenuDropdown items={['logout']} />
+// import Menu from '../../images/icons/icon-menu-user.svg'
+export class NavBar extends Component {
+  render() {
+    return (
+      <nav className="bg-red mb-16">
+        <div className="nav-inner container mx-auto flex justify-between items-center px-2 md-px-0 py-2">
+          <a href="/" className={'text-xl font-semibold ' + sharedStyles}>
+            TaskTodo
+          </a>
+          <div className="relative w-6 h-6">
+            <a
+              // {...getItemProps({ item })}
+              href={'#' + 'logout'}
+              onClick={e => {
+                e.preventDefault()
+                this.props.dispatch(logout())
+              }}
+              key={'logout'}
+              className="text-white px-4 text-center py-2 mb-1"
+              style={{ cursor: 'pointer' }}
+            >
+              {'logout'}
+            </a>
+          </div>
         </div>
-      </div>
-    </nav>
-  )
+      </nav>
+    )
+  }
 }
 
 let sharedStyles = 'my-0 text-white no-underline hover-underline'
@@ -23,3 +38,4 @@ let sharedStyles = 'my-0 text-white no-underline hover-underline'
 // <a href="/logsheet" className={sharedStyles}>
 // Log sheet
 // </a>
+export default connect()(NavBar)

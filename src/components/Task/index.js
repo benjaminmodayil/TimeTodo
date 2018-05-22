@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
-import './index.css'
-import TaskDropdown from '../TaskDropdown'
-
 import { connect } from 'react-redux'
 import { updateTask } from '../../actions'
-
 import Play from '../../images/icons/icon-play.svg'
+import TaskDropdown from '../TaskDropdown'
 import TaskForm from '../TaskForm/index'
 
 export class TaskContainer extends Component {

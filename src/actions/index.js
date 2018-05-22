@@ -190,7 +190,6 @@ export const fetchTasks = () => (dispatch, getState) => {
       return res.json()
     })
     .then(res => {
-      console.log(res, 'receiving')
       dispatch(fetchTasksSuccess(res))
     })
     .catch(err => {

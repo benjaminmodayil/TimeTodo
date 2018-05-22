@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import TaskContainer from '../TaskContainer/index'
-import './index.css'
 
 export class Completed extends Component {
   render() {
