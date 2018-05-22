@@ -11,7 +11,7 @@ export class NavBar extends Component {
           <a href="/" className={'text-xl font-semibold ' + sharedStyles}>
             TaskTodo
           </a>
-          <div className="relative w-6 h-6">
+          <div className="relative h-6">
             <a
               // {...getItemProps({ item })}
               href={'#' + 'logout'}
