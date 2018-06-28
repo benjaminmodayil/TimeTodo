@@ -86,6 +86,11 @@ export class Login extends Component {
                 Register
               </Link>
             </div>
+            <div className="flex flex-col">
+              <h2 className="text-base mt-8">Test Credentials</h2>
+              <p><span className="font-semibold">Username:</span> TestUser</p>
+              <p><span className="font-semibold">Password:</span> 1234512345</p>
+            </div>
           </form>
         </main>
       </React.Fragment>
